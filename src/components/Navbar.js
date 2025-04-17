@@ -1,11 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
-export default function Navbar() {
+export default function Navbar({title="Practice",about="Contact"}) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container">
           <a className="navbar-brand" href="/">
-            Practice
+            {title}
           </a>
           <button
             className="navbar-toggler"
@@ -27,7 +29,7 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">
-                  Link
+                  {about}
                 </a>
               </li>
               <li className="nav-item dropdown">
@@ -77,3 +79,12 @@ export default function Navbar() {
       </nav>
   )
 }
+Navbar.propTypes = {
+  title: PropTypes.string,   
+  about : PropTypes.string,
+}
+
+// Navbar.defaultProps = {
+//   title: 'Stranger',
+//   about:"heelo",
+// }

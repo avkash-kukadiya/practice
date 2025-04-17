@@ -2,15 +2,17 @@
 import "./App.css";
 // import "./componet/Navbar.js";
 import Navbar from "./components/Navbar";
+import TextForm from "./components/TextForm";
 
 
 
 function App() {
-  // let abx = "hey rilay "
-  // let name  =" the king";
+ 
   return (
     <>
-      <Navbar/>
+      {/* <Navbar title ="Practice" about="About  Us" /> */}
+     <Navbar/>
+     <TextForm />
     </>
   );
 }
